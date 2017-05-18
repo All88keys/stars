@@ -1,18 +1,15 @@
-window.addEventListener('resize', resizeCanvas, false);
-resizeCanvas();
-
-
-function resizeCanvas() {
-	c.width = window.innerWidth-30;
-	c.height = window.innerHeight-105;
-}
-
-
 var c = document.getElementById('canvas');
 var ctx = c.getContext('2d');
 var stars = [];
 var speed = 0;
 var int = 0;
+window.addEventListener('resize', resizeCanvas, false);
+
+resizeCanvas();
+function resizeCanvas() {
+	c.width = window.innerWidth-30;
+	c.height = window.innerHeight-105;
+}
 
 function star(x,y,size){
 	this.x = x;
