@@ -7,8 +7,8 @@ window.addEventListener('resize', resizeCanvas, false);
 
 resizeCanvas();
 function resizeCanvas() {
-	c.width = window.innerWidth-30;
-	c.height = window.innerHeight-105;
+	c.width = window.innerWidth;
+	c.height = window.innerHeight;
 }
 
 function star(x,y,size){
