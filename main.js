@@ -1,8 +1,7 @@
 var c = document.getElementById('canvas');
 var ctx = c.getContext('2d');
 var stars = [];
-var speed = 0;
-var int = 0;
+var speed = 1;
 window.addEventListener('resize', resizeCanvas, false);
 
 resizeCanvas();
@@ -29,8 +28,6 @@ function rand(min, max) {
 }
 
 setInterval(function(){
-	int++;
-  speed = Math.cos(int/100)+3;
 
 
 
