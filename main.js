@@ -35,7 +35,7 @@ setInterval(function(){
 
 
 	ctx.clearRect(0,0,c.width,c.height)	//clear canvas
-  stars.push(new star(0,rand(0,c.height),rand(2,10))); // make a new star off the screen
+  stars.push(new star(0,rand(0,c.height),rand(1,3))); // make a new star off the screen
   
   //update stars
   for(var i =0; i<stars.length; i++){
