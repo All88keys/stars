@@ -8,6 +8,7 @@ var colors = ['orange','red','white','yellow','gray'];
 c.addEventListener("mousemove", function(event) { xM = event.clientX; yM =event.clientY;})
 
 var guie ={
+  theme: 'space';
   starSize: 2,
   speed: 4,
   density: 1
@@ -15,6 +16,7 @@ var guie ={
 
 window.onload = function() {
   var gui = new dat.GUI();
+  gui.add(guie, 'theme', ['space','ocean']);
   gui.add(guie, 'starSize', 1,100);
   gui.add(guie, 'speed', -20, 20);
   gui.add(guie, 'density', 1,300)
@@ -49,6 +51,8 @@ function rand(min, max) {
 
 setInterval(function() {
 
+	if(guie.theme = 'ocean') {colors = ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'];}
+	else {colors = ['orange','red','white','yellow','gray'];};
 
   ctx.clearRect(0, 0, c.width, c.height); //clear canvas
   if(xM>c.width/2) {stars.push(new star(0, rand(1, c.height-1), rand(1, 4), rand(5,100)/25));}
