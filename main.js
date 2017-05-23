@@ -17,10 +17,10 @@ var guie ={
 
 window.onload = function() {
   var gui = new dat.GUI();
-  gui.add(guie, 'theme', ['space','ocean']);
-  gui.add(guie, 'starSize', 1,100);
-  gui.add(guie, 'speed', 0, 10);
-  gui.add(guie, 'density', 1,300)
+  gui.add(guie, 'theme', ['space','ocean']).onChange(reset());
+  gui.add(guie, 'starSize', 1,100).onChange(reset());
+  gui.add(guie, 'speed', 0, 10).onChange(reset());
+  gui.add(guie, 'density', 1,300).onChange(reset());
   resizeCanvas();
 
 
@@ -80,3 +80,11 @@ setInterval(function() {
   }
 
 }, 1)
+
+
+function reset(){
+	var max = stars.length;
+	for (var i = 0; i < max; i++) {
+  	stars.shift();
+	}
+}
