@@ -4,7 +4,7 @@ var stars = [];
 window.addEventListener('resize', resizeCanvas, false);
 var xM = 0;
 var yM = 0;
-var colors = ['orange','red','white','yellow','gray'];
+var colors = ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'];
 c.addEventListener("touchmove", function(event) { xM = event.pageX; yM =event.pageY;});
 c.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pageY;});
 
