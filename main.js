@@ -11,15 +11,15 @@ c.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pa
 var themes= {
 	space:{
 		bg: 'black',
-		colors: ['orange','red','white','yellow','gray'];
+		colors: ['orange','red','white','yellow','gray'],
 	},
 	ocean:{
 		bg: '#021E3D',
-		colors: ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'];
+		colors: ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'],
 	},
 	rainbow:{
 		bg: 'black',
-		colors: ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'];
+		colors: ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'],
 	},
 	update: function(){
 		colors = themes.eval(theme);
