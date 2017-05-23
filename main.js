@@ -85,6 +85,6 @@ setInterval(function() {
 function reset(){
 	var max = stars.length;
 	for (var i = 0; i < max; i++) {
-  	stars.shift();
+  	stars[i] = null;
 	}
 }
