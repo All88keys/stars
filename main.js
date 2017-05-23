@@ -33,7 +33,7 @@ function resizeCanvas() {
 }
 
 function star(x, y, size, v,color) {
-  this.speed = v;
+  this.speed = v+guie.speed;
   this.x = x;
   this.y = y;
   this.size = Math.floor(v) + 1;
@@ -58,9 +58,9 @@ setInterval(function() {
   ctx.clearRect(0, 0, c.width, c.height);//clear canvas
 	
 	for(var i = 0; i<guie.density; i++){
-  		if(xM>c.width/2) {stars.push(new star(0, rand(1, c.height-1), rand(1, 4), rand(5,guie.speed)/25));}
-		else if(xM<c.width/2) {stars.push(new star(c.width, rand(1, c.height-1), rand(1, 4), rand(5,guie.speed)/25));}// make a new star off the screen
- 		if(yM>c.height/2) {stars.push(new star(rand(1, c.width-1), 0, rand(1, 4), rand(5,guie.speed)/25));}
+  		if(xM>c.width/2) {stars.push(new star(0, rand(1, c.height-1), rand(1, 4), rand(5,100)/25));}
+		else if(xM<c.width/2) {stars.push(new star(c.width, rand(1, c.height-1), rand(1, 4), rand(5,100)/25));}// make a new star off the screen
+ 		if(yM>c.height/2) {stars.push(new star(rand(1, c.width-1), 0, rand(1, 4), rand(5,100)/25));}
 		else if(yM<c.height/2) {stars.push(new star(rand(1,c.width-1), c.height, rand(1, 4), rand(5,100)/25));}
 	}
   //update stars
