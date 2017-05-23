@@ -33,14 +33,14 @@ function resizeCanvas() {
 }
 
 function star(x, y, size, v,color) {
-  this.speed = v+guie.speed;
+  this.velocity = v+guie.speed;
   this.x = x;
   this.y = y;
   this.size = Math.floor(v) + 1;
   this.color =colors[rand(0,colors.length-1)];
   this.update = function() {
-    this.x += v * (xM - c.width / 2) / 500;
-    this.y += v * (yM - c.height / 2) / 500;
+    this.x += this.velocity * (xM - c.width / 2) / 500;
+    this.y += this.velocity * (yM - c.height / 2) / 500;
     ctx.fillStyle = this.color;
     ctx.fillRect(this.x, this.y, this.size, this.size);
   };
