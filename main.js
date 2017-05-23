@@ -11,7 +11,7 @@ c.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pa
 var guie ={
   theme: 'space',
   starSize: 2,
-  speed: 4,
+  speed: 50,
   density: 1
 }
 
@@ -19,7 +19,7 @@ window.onload = function() {
   var gui = new dat.GUI();
   gui.add(guie, 'theme', ['space','ocean']);
   gui.add(guie, 'starSize', 1,100);
-  gui.add(guie, 'speed', -20, 20);
+  gui.add(guie, 'speed', -200, 200);
   gui.add(guie, 'density', 1,300)
   resizeCanvas();
 
@@ -58,9 +58,9 @@ setInterval(function() {
   ctx.clearRect(0, 0, c.width, c.height);//clear canvas
 	
 	for(var i = 0; i<guie.density; i++){
-  		if(xM>c.width/2) {stars.push(new star(0, rand(1, c.height-1), rand(1, 4), rand(5,100)/25));}
-		else if(xM<c.width/2) {stars.push(new star(c.width, rand(1, c.height-1), rand(1, 4), rand(5,100)/25));}// make a new star off the screen
- 		if(yM>c.height/2) {stars.push(new star(rand(1, c.width-1), 0, rand(1, 4), rand(5,100)/25));}
+  		if(xM>c.width/2) {stars.push(new star(0, rand(1, c.height-1), rand(1, 4), rand(5,guie.speed)/25));}
+		else if(xM<c.width/2) {stars.push(new star(c.width, rand(1, c.height-1), rand(1, 4), rand(5,guie.speed)/25));}// make a new star off the screen
+ 		if(yM>c.height/2) {stars.push(new star(rand(1, c.width-1), 0, rand(1, 4), rand(5,guie.speed)/25));}
 		else if(yM<c.height/2) {stars.push(new star(rand(1,c.width-1), c.height, rand(1, 4), rand(5,100)/25));}
 	}
   //update stars
