@@ -22,7 +22,7 @@ var themes= {
 		colors: ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'],
 	},
 	update: function(){
-		colors = themes.eval(theme);
+		colors = themes.eval(guie.theme);
 	}
 }
 
