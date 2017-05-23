@@ -8,7 +8,7 @@ var colors = ['orange','red','white','yellow','gray'];
 c.addEventListener("mousemove", function(event) { xM = event.clientX; yM =event.clientY;})
 
 var guie ={
-  theme: 'space';
+  theme: 'space',
   starSize: 2,
   speed: 4,
   density: 1
