@@ -11,7 +11,7 @@ c.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pa
 var guie ={
   theme: 'space',
   starSize: 2,
-  speed: 50,
+  speed: 1,
   density: 1
 }
 
@@ -19,7 +19,7 @@ window.onload = function() {
   var gui = new dat.GUI();
   gui.add(guie, 'theme', ['space','ocean']);
   gui.add(guie, 'starSize', 1,100);
-  gui.add(guie, 'speed', -200, 200);
+  gui.add(guie, 'speed', 0, 10);
   gui.add(guie, 'density', 1,300)
   resizeCanvas();
 
