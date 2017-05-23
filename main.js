@@ -52,8 +52,13 @@ function rand(min, max) {
 
 setInterval(function() {
 
-	if(guie.theme == 'ocean') {colors = ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'];}
-	else {colors = ['orange','red','white','yellow','gray'];};
+	if(guie.theme == 'ocean') {
+		colors = ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'];
+		document.getElementById('canvas').style.background = '#021E3D';
+	}
+	else {colors = ['orange','red','white','yellow','gray'];
+	     document.getElementById('canvas').style.background = 'black';
+	     };
 
   ctx.clearRect(0, 0, c.width, c.height);//clear canvas
 	
