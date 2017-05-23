@@ -5,7 +5,7 @@ window.addEventListener('resize', resizeCanvas, false);
 var xM = 0;
 var yM = 0;
 var colors = ['orange','red','white','yellow','gray'];
-c.addEventListener("mousemove", function(event) { xM = event.clientX; yM =event.clientY;})
+c.addEventListener("touchmove", function(event) { xM = event.clientX; yM =event.clientY;})
 
 var guie ={
   theme: 'space',
