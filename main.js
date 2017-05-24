@@ -46,7 +46,7 @@ var guie ={
 
 
 window.onload = function() {
-	for(var i = 0; i<themes.length; i++;){
+	for(var i = 0; i<themes.length; i++){
 		themeNames.push(themes[i].id);
 	};
   var gui = new dat.GUI();
