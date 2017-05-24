@@ -30,7 +30,7 @@ function updateThemes(){
 		for(var i = 0; i<themes.length; i++){
 			if(guie.theme == themes[i].id){
 				colors = themes[i].colors;
-				document.getElementById('canvas').style.background = theme[i].bg;
+				document.getElementById('canvas').style.background = themes[i].bg;
 			}
 		}		
 	}
