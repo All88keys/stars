@@ -5,6 +5,7 @@ window.addEventListener('resize', resizeCanvas, false);
 var xM = 0;
 var yM = 0;
 var colors = ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'];
+var themeNames = [];
 c.addEventListener("touchmove", function(event) { xM = event.pageX; yM =event.pageY;});
 c.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pageY;});
 
@@ -41,12 +42,13 @@ var guie ={
   speed: 1,
   density: 1
 }
-var themeNames = [];
-for(i = 0, i<themes.length; i++;){
-	themeNames.push(themes[i].id);
-}
+
+
 
 window.onload = function() {
+	for(var i = 0, i<themes.length; i++;){
+		themeNames.push(themes[i].id);
+	};
   var gui = new dat.GUI();
   gui.add(guie, 'theme', themeNames).onChange(function(){reset()});
   gui.add(guie, 'starSize', 1,100).onChange(function(){reset()});
