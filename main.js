@@ -32,7 +32,7 @@ var themes= [
 	},
 	{
 		id: 'snow',
-		bg: '#c1c1c1',
+		bg: '##7f7f7f',
 		colors: ['#ffffff',"#c9c9c9","#e5e5e5","#ededed"],
 	}
 ];
