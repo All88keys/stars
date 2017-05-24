@@ -13,7 +13,7 @@ var themes= [
 	{
 		id: 'space',
 		bg: 'black',
-		colors: ['orange','red','white','yellow','gray'],
+		colors: ['white'],
 	},
 	{
 		id: 'ocean',
@@ -24,6 +24,16 @@ var themes= [
 		id: 'rainbow',
 		bg: 'black',
 		colors: ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'],
+	},
+	{
+		id: 'vector',
+		bg: 'black',
+		colors: ['red','blue','lime'],
+	},
+	{
+		id: 'snow',
+		bg: '#c1c1c1',
+		colors: ['#ffffff',"#c9c9c9","#e5e5e5","#ededed"],
 	}
 ];
 
