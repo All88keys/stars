@@ -8,23 +8,32 @@ var colors = ['orange','red','white','yellow','gray','green','pink','blue','purp
 c.addEventListener("touchmove", function(event) { xM = event.pageX; yM =event.pageY;});
 c.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pageY;});
 
-var themes= {
-	space:{
+var themes= [
+	{
+		id: 'space',
 		bg: 'black',
 		colors: ['orange','red','white','yellow','gray'],
 	},
-	ocean:{
+	{
+		id: 'ocean',
 		bg: '#021E3D',
 		colors: ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'],
 	},
-	rainbow:{
+	{
+		id: 'rainbow',
 		bg: 'black',
 		colors: ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'],
-	},
-	update: function(){
-		//colors = themes.eval(guie.theme);
 	}
-}
+];
+
+function updateThemes(){
+		for(var i = 0; i<themes.length; i++){
+			if(guie.theme == themes[i].id){
+				colors = themes[i].colors;
+				document.getElementById('canvas').style.background = theme[i].bg;
+			}
+		}		
+	}
 
 var guie ={
   theme: 'space',
@@ -70,8 +79,8 @@ function rand(min, max) {
 
 setInterval(function() {
 
-	//themes.update();
-	if(guie.theme == 'ocean') {
+	updateThemes();
+	/*if(guie.theme == 'ocean') {
 		colors = ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'];
 		document.getElementById('canvas').style.background = '#021E3D';
 	}
@@ -79,7 +88,7 @@ setInterval(function() {
 		//colors = ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'];
 		colors = ['red','blue','#00FF00','white'];
 	     document.getElementById('canvas').style.background = 'black';
-	     };
+	     };*/
 
   ctx.clearRect(0, 0, c.width, c.height);//clear canvas
 	
