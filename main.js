@@ -79,7 +79,7 @@ function star(x, y, size, v,color) {
   this.velocity = v+guie.speed;
   this.x = x;
   this.y = y;
-  this.size = Math.floor(v) + 1;
+  this.size = Math.floor(v) + guie.starSize;
   this.color =colors[rand(0,colors.length)];
   this.update = function() {
     this.x += this.velocity * (xM - c.width / 2) / 500;
