@@ -41,10 +41,14 @@ var guie ={
   speed: 1,
   density: 1
 }
+var themeNames = [];
+for(i = 0, i<themes.length; i++;){
+	themeNames.push(themes[i].id);
+}
 
 window.onload = function() {
   var gui = new dat.GUI();
-  gui.add(guie, 'theme', ['space','ocean']).onChange(function(){reset()});
+  gui.add(guie, 'theme', themeNames).onChange(function(){reset()});
   gui.add(guie, 'starSize', 1,100).onChange(function(){reset()});
   gui.add(guie, 'speed', -1, 10).onChange(function(){reset()});
   gui.add(guie, 'density', 1,50).onChange(function(){reset()});
