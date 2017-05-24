@@ -70,7 +70,7 @@ function star(x, y, size, v,color) {
   this.x = x;
   this.y = y;
   this.size = Math.floor(v) + 1;
-  this.color =colors[rand(0,colors.length-1)];
+  this.color =colors[rand(0,colors.length)];
   this.update = function() {
     this.x += this.velocity * (xM - c.width / 2) / 500;
     this.y += this.velocity * (yM - c.height / 2) / 500;
