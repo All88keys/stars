@@ -22,7 +22,7 @@ var themes= {
 		colors: ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'],
 	},
 	update: function(){
-		colors = themes.eval(guie.theme);
+		//colors = themes.eval(guie.theme);
 	}
 }
 
@@ -70,15 +70,15 @@ function rand(min, max) {
 
 setInterval(function() {
 
-	themes.update();
-	/*if(guie.theme == 'ocean') {
+	//themes.update();
+	if(guie.theme == 'ocean') {
 		colors = ['#A7D2F4', '#80BBE8', '#5399D0','#94B8EC','#6F9CDD','#4B80CB'];
 		document.getElementById('canvas').style.background = '#021E3D';
 	}
 	else {//colors = ['orange','red','white','yellow','gray'];
 		colors = ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'];
 	     document.getElementById('canvas').style.background = 'black';
-	     };*/
+	     };
 
   ctx.clearRect(0, 0, c.width, c.height);//clear canvas
 	
