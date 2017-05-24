@@ -77,7 +77,7 @@ setInterval(function() {
 	}
 	else {//colors = ['orange','red','white','yellow','gray'];
 		//colors = ['orange','red','white','yellow','gray','green','pink','blue','purple','brown'];
-		colors = ['red','blue','lime'];
+		colors = ['red','blue','#00FF00'];
 	     document.getElementById('canvas').style.background = 'black';
 	     };
 
