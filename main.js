@@ -8,6 +8,8 @@ var colors = ['orange','red','white','yellow','gray','green','pink','blue','purp
 var themeNames = [];
 document.addEventListener("touchmove", function(event) { xM = event.pageX; yM =event.pageY;});
 document.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pageY;});
+parent.document.addEventListener("touchmove", function(event) { xM = event.pageX; yM =event.pageY;});
+parent.document.addEventListener("mousemove", function(event) { xM = event.pageX; yM =event.pageY;});
 
 var themes= [
 	{
